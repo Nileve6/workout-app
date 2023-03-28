@@ -1,20 +1,23 @@
 import React, { FC, useState } from 'react';
+import ExerciseTimer from '../ExersiceTimer/ExerciseTimer';
 import Timeform from '../Form/Timeform';
-import Workout from '../Workout/Workout';
 import './LandingPageStyles.scss';
 
+export interface Counter{
+  hold: number,
+  rest: number,
+  amountOfSet: number,
+}
 
 const LandingPage : FC = () => {
- const [ready, setReady] = useState<null | object>(null)
+ const [counter, setCounter] = useState<Counter | null>(null)
 
   return (
-    <>
     <div>
-      {ready ? <Workout ready={ready} /> :
-        <Timeform setReady={setReady} />
+      {counter ? <ExerciseTimer counter={counter} /> :
+        <Timeform setCounter={setCounter}/>
       }
     </div>
-    </>
   );
 }
 
