@@ -1,20 +1,25 @@
 $background-color: #282c34;
-$gradient-primary: #00FFA3;
-$gradient-secondary: #DC1FFF;
-button{
-    padding: 20px 60px 20px 60px;
-    border: double 4px transparent;
-    border-radius: 80px;
-    background-image: linear-gradient($background-color, $background-color), radial-gradient(circle at top left, $gradient-primary, $gradient-secondary);
-    color: transparent;
-    font-size: 24px;
-    background-origin: border-box;
-    background-clip: padding-box, border-box;
-    color: #ffffff;
-    font-weight: bold;
-    text-transform: uppercase;
-    &:hover, &:focus{
-      background-image: radial-gradient(circle at top left,  $gradient-primary, $gradient-secondary);
-      color: $background-color;
-    }
+$gradient-primary: #00ffa3;
+$gradient-secondary: #dc1fff;
+.button {
+  padding: 1.25rem 3.75rem;
+  border: double 0.25rem transparent;
+  border-radius: 80px;
+  background-image: linear-gradient($background-color, $background-color),
+    radial-gradient(circle at top left, $gradient-primary, $gradient-secondary);
+  color: transparent;
+  font-size: 1.5rem;
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  color: #ffffff;
+  font-weight: bold;
+  &:hover,
+  &:focus {
+    background-image: radial-gradient(
+      circle at top left,
+      $gradient-primary,
+      $gradient-secondary
+    );
+    color: $background-color;
   }
+}
